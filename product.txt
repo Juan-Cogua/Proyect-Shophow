@@ -1,0 +1,30 @@
+1,Laptop HP Pavilion,2500.0
+2,Mouse Logite3,50.0
+3,Teclado Mecánico Razer,120.0
+4,Monitor 27'' Samsung,350.0
+5,Webcam Full HD,75.0
+6,Disco Duro Externo 1TB,60.0
+7,Auriculares HyperX Cloud II,99.0
+8,Tarjeta Gráfica NVIDIA RTX 3060,400.0
+9,Impresora Multifuncional,150.0
+10,Router Wi-Fi 6,80.0
+11,Silla Gamer Ergonomica,220.0
+12,Tablet Samsung Galaxy Tab,300.0
+13,Smartphone Xiaomi Redmi Note 12,280.0
+14,Smartwatch Apple Watch SE,250.0
+15,Cámara DSLR Canon EOS 2000D,450.0
+16,Memoria USB 128GB Kingston,25.0
+17,Proyector Portátil Epson,320.0
+18,Bocina Bluetooth JBL Charge 5,180.0
+19,Consola PlayStation 5,600.0
+20,Control Inalámbrico Xbox Series,70.0
+21,Laptop Dell Inspiron,850.0
+22,Disco SSD 1TB Samsung,110.0
+23,Microfono Blue Yeti,120.0
+24,Tableta Gráfica Wacom,200.0
+25,Cámara de Seguridad Wi-Fi,90.0
+26,Smart TV LG 55'',500.0
+27,Fuente de Poder 750W Corsair,95.0
+28,Memoria RAM 16GB DDR4,60.0
+29,Cargador Portátil 20000mAh,45.0
+30,Refrigeración Líquida CPU,140.0
