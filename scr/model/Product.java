@@ -5,10 +5,10 @@ public class Product {
     private double price;
     private int id;
 
-    public Product(String name, double price, int id) {
+    public Product(int id, String name, double price) {
+        this.id = id;
         this.name = name;
         this.price = price;
-        this.id = id;
     }
 
     public String getName() {
@@ -26,14 +26,16 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
-    
-       public void shophowInfo(){
-        System.out.println("Product Information: Product Name: "+name+", Product Price: "+price);
-     }
+    }
+
+    public void shophowInfo() {
+        System.out.println("Product Information: Product Name: " + name + ", Product Price: " + price);
     }
 }
