@@ -1,4 +1,4 @@
-package scr.view;
+package scr.UI;
 
 public class WindowView {
     

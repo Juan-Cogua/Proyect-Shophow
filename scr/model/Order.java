@@ -64,7 +64,7 @@ public class Order {
         System.out.println("Pedido #" + orderId);
 
         for (Product p : products) {
-            System.out.println(" - " + p.getPrice());
+            System.out.println(p.getName() + " - $" + p.getPrice());
         }
         LocalDateTime maxPaymentDate = buyDate.plusHours(24);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy HH:mm", new Locale("es", "ES"));
