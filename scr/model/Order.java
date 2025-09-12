@@ -59,15 +59,19 @@ public class Order {
         }
         return total;
     }
-    public void showOrder(){
-        System.out.println("=== Resumen del Pedido ===");
-        System.out.println("Pedido #" + orderId);
+  public String showOrder(){
+    String chekkouMessage= "";
+    System.out.println("=== Resumen del Pedido ===");
+    System.out.println("Pedido #" + orderId);
 
-        for (Product p : products) {
-            System.out.println(p.getName() + " - $" + p.getPrice());
-        }
-        LocalDateTime maxPaymentDate = buyDate.plusHours(24);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy HH:mm", new Locale("es", "ES"));
-         System.out.println("Total: $" + TotalCost() + " La fecha maxima de pago de su orden es: " + maxPaymentDate.format(formatter));
+    for (Product p : products) {
+        System.out.println(p.getName() + " - $" + p.getPrice());
     }
+    LocalDateTime maxPaymentDate = buyDate.plusHours(24);
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("EEEE, dd MMMM yyyy HH:mm", new Locale("es", "ES"));
+    System.out.println("Total: $" + TotalCost() + " La fecha maxima de pago de su orden es: " + maxPaymentDate.format(formatter));
+    
+    chekkouMessage = "Total: $" + TotalCost() + " La fecha maxima de pago de su orden es: " + maxPaymentDate.format(formatter);
+    return chekkouMessage;
+}
 }

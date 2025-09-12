@@ -16,6 +16,7 @@ public class ProductLoader {
                 int id = Integer.parseInt(values[0]);
                 String name = values[1];
                 double price = Double.parseDouble(values[2]);
+
                 products.add(new Product(id, name, price));
             }
         } catch (IOException e) {
