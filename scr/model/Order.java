@@ -4,14 +4,17 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import scr.model.MetodoDePago.PaymentMethod;
 
 public class Order {
     
     private int orderId;
     private List<Product> products;
     LocalDateTime buyDate;
+    private PaymentMethod paymentMethod;
 
-    public Order (int orderId){
+    public Order (int orderId, PaymentMethod paymentMethod) {
+        this.paymentMethod = paymentMethod;
         this.orderId = orderId;
         this.buyDate = LocalDateTime.now();
         this.products = new ArrayList<>();
@@ -73,5 +76,9 @@ public class Order {
     
     chekkouMessage = "Total: $" + TotalCost() + " La fecha maxima de pago de su orden es: " + maxPaymentDate.format(formatter);
     return chekkouMessage;
+}
+    public void processOrderPayment() {
+        System.out.println("Procesando pago para el pedido #" + orderId + ":");
+        paymentMethod.processPayment();
 }
 }
