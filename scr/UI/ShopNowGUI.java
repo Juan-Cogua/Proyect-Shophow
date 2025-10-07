@@ -27,6 +27,8 @@ public class ShopNowGUI extends JFrame {
         // Cargar productos
         catalogo = ProductLoader.loadProducts("product.txt");
         customer = new Customer("Andres Vargas", "andrescamilo.vargas@uptc.edu.co");
+
+
         order = new Order(101);
 
         // Panel de catalogo
