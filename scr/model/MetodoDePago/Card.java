@@ -39,7 +39,7 @@ public class Card extends PaymentMethod {
 
 //Metodos
     @Override
-    public void processPayment() {
-        System.out.println("Procesando pago con tarjeta terminada en " + String.valueOf(cardNumber).substring(String.valueOf(cardNumber).length() - 4));
+    public String processPayment() {
+      return "Procesando pago con tarjeta terminada en " + String.valueOf(cardNumber).substring(String.valueOf(cardNumber).length() - 4);
     }
 }

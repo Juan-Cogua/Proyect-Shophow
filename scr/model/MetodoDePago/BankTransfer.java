@@ -28,7 +28,9 @@ public class BankTransfer extends PaymentMethod {
     }
 
     @Override
-    public void processPayment() {
-        System.out.println("Procesando transferencia bancaria desde el banco " + bankName +" a nombre de " + accName);
+    public String processPayment() {
+        return "Procesando transferencia bancaria desde el banco " + bankName +" a nombre de " + accName;
     }
+
+
 }

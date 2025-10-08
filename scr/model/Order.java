@@ -49,6 +49,13 @@ public class Order {
     public void setBuyDate(LocalDateTime buyDate) {
         this.buyDate = buyDate;
     }
+    public void setPaymentMethod(PaymentMethod paymentMethod) {
+    this.paymentMethod = paymentMethod;
+    }
+
+    public PaymentMethod getPaymentMethod() {
+    return paymentMethod;
+    }
 
 
     // Metodods 
@@ -62,7 +69,7 @@ public class Order {
         }
         return total;
     }
-  public String showOrder(){
+public String showOrder(){
     String chekkouMessage= "";
     System.out.println("=== Resumen del Pedido ===");
     System.out.println("Pedido #" + orderId);
@@ -77,8 +84,20 @@ public class Order {
     chekkouMessage = "Total: $" + TotalCost() + " La fecha maxima de pago de su orden es: " + maxPaymentDate.format(formatter);
     return chekkouMessage;
 }
-    public void processOrderPayment() {
-        System.out.println("Procesando pago para el pedido #" + orderId + ":");
-        paymentMethod.processPayment();
+
+public String processOrderPayment() {
+    if (paymentMethod == null) {
+        return "❌ No se ha seleccionado ningún método de pago.";
+    }
+
+    // Obtiene el mensaje de pago desde el método de pago específico
+    String paymentMessage = paymentMethod.processPayment();
+
+    // También puedes conservar esta línea si quieres mostrarlo en consola
+    System.out.println("Procesando pago para el pedido #" + orderId + ":");
+    System.out.println(paymentMessage);
+
+    return "Procesando pago para el pedido #" + orderId + ":\n" + paymentMessage;
 }
+
 }

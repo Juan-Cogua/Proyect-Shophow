@@ -27,5 +27,9 @@ public abstract class PaymentMethod {
     }
 
     // Métodos
-    public abstract void processPayment();
+    public abstract String processPayment();
+
+
+
+
 }

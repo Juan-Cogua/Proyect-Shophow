@@ -20,8 +20,8 @@ public class DigitalWallet extends PaymentMethod {
 
 //Metodos
     @Override
-public void processPayment() {
-    System.out.println("Procesando billetera digital con ID comenzando en " + String.valueOf(walletID).substring(0, 4));
+    public String processPayment() {
+        return "Procesando billetera digital con ID comenzando en " + String.valueOf(walletID).substring(0, 4);
     }
 }
 
