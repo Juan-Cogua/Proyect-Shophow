@@ -117,12 +117,10 @@ try {
             cartArea.append(paymentInfo + "\n");
             cartArea.append("------------------------\n");
         }
-} catch (NumberFormatException ex) {
-    JOptionPane.showMessageDialog(this, "Número inválido. Intenta de nuevo.");
-    return;
-}
-
-
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this, "Número inválido. Intenta de nuevo.");
+            return;
+        }
             order.setPaymentMethod(method);
             order.processOrderPayment();
             cartArea.append("\n" + order.showOrder() + "\nMétodo de pago: " + selected + "\n");
