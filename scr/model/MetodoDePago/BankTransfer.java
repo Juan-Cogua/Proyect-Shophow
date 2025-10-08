@@ -2,13 +2,33 @@ package scr.model.MetodoDePago;
 
 public class BankTransfer extends PaymentMethod {
 
-    public BankTransfer(String ownerName, double amount) {
+    private String accName;
+    private String bankName;
+
+    public BankTransfer(String ownerName, double amount, String accName, String bankName) {
         super(ownerName, amount);
+        this.accName = accName;
+        this.bankName = bankName;
+    }
+
+    public String getAccName() {
+        return accName;
+    }
+
+    public void setAccName(String accName) {
+        this.accName = accName;
+    }
+
+    public String getBankName() {
+        return bankName;
+    }
+
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
     }
 
     @Override
     public void processPayment() {
-        // Lógica para procesar transferencia bancaria
-        System.out.println("Procesando pago por transferencia bancaria...");
+        System.out.println("Procesando transferencia bancaria desde el banco " + bankName +" a nombre de " + accName);
     }
 }

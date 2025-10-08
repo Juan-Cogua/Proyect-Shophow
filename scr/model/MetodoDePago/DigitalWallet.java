@@ -2,14 +2,27 @@ package scr.model.MetodoDePago;
 
 public class DigitalWallet extends PaymentMethod {
 
-    public DigitalWallet(String ownerName, double amount) {
+    private int walletID;
+
+    public DigitalWallet(String ownerName, double amount, int walletID) {
         super(ownerName, amount);
+        this.walletID = walletID;
     }
 
+    public int getWalletID() {
+        return walletID;
+    }
+
+    public void setWalletID(int walletID) {
+        this.walletID = walletID;
+    }
+
+
+//Metodos
     @Override
-    public void processPayment() {
-        // Lógica para procesar pago con billetera digital
-        System.out.println("Procesando pago con billetera digital...");
+public void processPayment() {
+    System.out.println("Procesando billetera digital con ID comenzando en " + String.valueOf(walletID).substring(0, 4));
     }
-
 }
+
+

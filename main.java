@@ -19,7 +19,6 @@ public class main {
 
         Scanner scanner = new Scanner(System.in);
         Customer customer = new Customer("Andres Vargas", "andrescamilo.vargas@uptc.edu.co");
-        
         Order order = new Order(101); 
 
 
